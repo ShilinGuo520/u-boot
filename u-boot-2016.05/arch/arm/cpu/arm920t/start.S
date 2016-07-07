@@ -78,7 +78,12 @@ copyex:
 	ldr	r1, =0x3ff
 	ldr	r0, =INTSUBMSK
 	str	r1, [r0]
+# else 
+	ldr r1, =0x7fff
+	ldr r0, =INTSUBMSK
+	ldr r1, [r0]
 # endif
+
 
 # if defined(CONFIG_S3C2440)
     /* FCLK:HCLK:PCLK = 1:4:8 */
