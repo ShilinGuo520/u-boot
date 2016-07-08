@@ -143,9 +143,14 @@
 #define CONFIG_SYS_FLASH_BANKS_LIST     { CONFIG_SYS_FLASH_BASE }
 #define CONFIG_SYS_MAX_FLASH_SECT	(35)
 
+#if 0
 #define CONFIG_ENV_ADDR			(CONFIG_SYS_FLASH_BASE + 0x070000)
 #define CONFIG_ENV_IS_IN_FLASH
 #define CONFIG_ENV_SIZE			0x10000
+#endif
+#define CONFIG_ENV_IS_IN_NAND
+#define CONFIG_ENV_OFFSET 0x40000 	// 256K for u-boot
+#define CONFIG_ENV_SIZE 0x20000 	// 128K for environment
 /* allow to overwrite serial and ethaddr */
 #define CONFIG_ENV_OVERWRITE
 
