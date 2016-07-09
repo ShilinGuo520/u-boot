@@ -183,6 +183,10 @@
 #define CONFIG_MTD_PARTITIONS
 #define CONFIG_YAFFS2
 #define CONFIG_RBTREE
+#define MTDIDS_DEFAULT          "nand0=s3c2440-nand.0"
+#define MTDPARTS_DEFAULT        "mtdparts=s3c2440-nand.0:256k(bootloader),"\
+				"128k(params),2m(kernel),"\
+				"-(rootfs)"
 
 /* additions for new relocation code, must be added to all boards */
 #define CONFIG_SYS_SDRAM_BASE	PHYS_SDRAM_1
