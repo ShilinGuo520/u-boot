@@ -149,7 +149,7 @@
 #define CONFIG_ENV_SIZE			0x10000
 #endif
 #define CONFIG_ENV_IS_IN_NAND
-#define CONFIG_ENV_OFFSET 0x40000 	// 256K for u-boot
+#define CONFIG_ENV_OFFSET 0x80000 	// 512K for u-boot
 #define CONFIG_ENV_SIZE 0x20000 	// 128K for environment
 /* allow to overwrite serial and ethaddr */
 #define CONFIG_ENV_OVERWRITE
@@ -184,8 +184,8 @@
 #define CONFIG_YAFFS2
 #define CONFIG_RBTREE
 #define MTDIDS_DEFAULT          "nand0=s3c2440-nand.0"
-#define MTDPARTS_DEFAULT        "mtdparts=s3c2440-nand.0:256k(bootloader),"\
-				"128k(params),2m(kernel),"\
+#define MTDPARTS_DEFAULT        "mtdparts=s3c2440-nand.0:512k(bootloader),"\
+				"128k(params),5m(kernel),"\
 				"-(rootfs)"
 
 /* additions for new relocation code, must be added to all boards */
